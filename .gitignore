@@ -1,0 +1,5 @@
+*.env
+*.crt
+*.key
+venv/
+__pycache__/
