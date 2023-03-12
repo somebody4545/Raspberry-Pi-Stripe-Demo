@@ -20,7 +20,7 @@ I highly recommend you get a domain, and preferably use Cloudflare DNS, to ensur
 There are many tutorials on how to configure this with Cloudflare, so shouldn't be too difficult!
 
 ### Getting an SSL certificate 
-Not required but highly recommended if you want to use Https properly. First, get an SSL certificate and key. You can find many services to get one. Save these in your project directory. I saved mine as `server.crt` and `server.key`.
+Not required but highly recommended if you want to use HTTPS properly. First, get an SSL certificate and key. You can find many services to get one. Save these in your project directory. I saved mine as `server.crt` and `server.key`.
 
 
 ## How to start a server
