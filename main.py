@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, url_for, redirect, request, session, redirect
+from flask import Flask, render_template, url_for, redirect, request, redirect
 import stripe
 from flask import Flask
 app = Flask(__name__)
