@@ -74,7 +74,7 @@ Not required but highly recommended if you want to use HTTPS properly. First, ge
 I am unsure whether this is required on other OSes or if it is at all, but it solved a problem I had with HTTPS.
 On Raspberry Pi:
 
-    sudo apt install openssl
+    sudo apt-get install libssl-dev
 
 #### Install with `pip`
 ```
