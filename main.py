@@ -1,7 +1,6 @@
 import os
-from flask import Flask, render_template, url_for, redirect, request, session, redirect
+from flask import Flask, render_template, url_for, request, session, redirect
 import stripe
-from flask import Flask
 app = Flask(__name__)
 ASSETS_DIR = os.path.dirname(os.path.abspath(__file__))
 csp = {
