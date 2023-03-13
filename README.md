@@ -77,7 +77,8 @@ On Raspberry Pi:
     sudo apt install openssl
 
 #### Install with `pip`
-```pip install flask
+```
+pip install flask
 pip install stripe
 pip install uwsgi
 pip install python-dotenv
