@@ -45,7 +45,7 @@ On Raspberry Pi, you can find this by typing `ip address` in your terminal. No m
 Go to your router configuration website. Refer to your router manual or online for how to do so. You should also be able to figure out where the port forwarding menu is, and add your local ip there. If you plan on using USWGI, your input port will be 5000. Use output port 80 for HTTP, and 443 for HTTPS. Set protocol to TCP if it's not that already. 
 
 ### Getting a domain
-I highly recommend you get a domain, and preferably use Cloudflare DNS, to ensure your home IP isn't exposed when you self-host. You can get one at [Freenom](https://freenom.com) for free!
+I highly recommend you get a domain, and preferably use Cloudflare DNS, to ensure your home IP isn't exposed when you self-host. You can get one at [Freenom](https://freenom.com) or [eu.org](https:/eu.org) for free!
 
 There are many tutorials on how to configure Freenom with Cloudflare, so shouldn't be too difficult!
 
