@@ -2,7 +2,7 @@
 Simple Stripe payment accepting implementation that can be used for other projects very easily. Built with Flask, Stripe API, and UWSGI
 
 
-### THIS README WAS DESIGNED FOR RASPBERRY PI SERVERS! INSTRUCTIONS WILL LIKELY BE DIFFERENT FOR OTHER HOSTING METHODS!
+### THIS README WAS DESIGNED FOR HOSTING ON A RASPBERRY PI WITH RASPBERRY PI OS. IF YOU ARE HOSTING ON A DIFFERENT OS, STEPS MAY BE DIFFERENT.
 
 
 ## Stripe Setup
@@ -45,7 +45,7 @@ On Raspberry Pi, you can find this by typing `ip address` in your terminal. No m
 Go to your router configuration website. Refer to your router manual or online for how to do so. You should also be able to figure out where the port forwarding menu is, and add your local ip there. If you plan on using USWGI, your input port will be 5000. Use output port 80 for HTTP, and 443 for HTTPS. Set protocol to TCP if it's not that already. 
 
 ### Getting a domain
-I highly recommend you get a domain, and preferably use Cloudflare DNS, to ensure your home IP isn't exposed when you self-host. You can get one at [Freenom](https://freenom.com) or [eu.org](https:/eu.org) for free!
+I highly recommend you get a domain, and preferably use Cloudflare DNS, to ensure your home IP isn't exposed when you self-host. You can get one at ~~[Freenom](https://freenom.com)~~ (RIP 🪦) or [eu.org](https:/eu.org) for free!
 
 There are many tutorials on how to configure Freenom with Cloudflare, so shouldn't be too difficult!
 
@@ -76,12 +76,9 @@ On Raspberry Pi:
 
     sudo apt-get install libssl-dev
 
-#### Install with `pip`
+#### Install Python packages
 ```
-pip install flask
-pip install stripe
-pip install uwsgi
-pip install python-dotenv
+pip install -r requirements.txt
 ```
     
 ### Creating environment variables
@@ -92,9 +89,9 @@ In your project directory, create a file named `.env` and copy the code block be
 
 
 ### Run the script
-    uwsgi --master --https 0.0.0.0:8000,server.crt,server.key  -p 4 -w hello:app
+    uwsgi --master --https 0.0.0.0:8000,server.crt,server.key  -p 4 -w run:app
 replace `server.crt` with your certificate path and `server.key` with your key path.
 
-`hello:app` runs `hello.py`, which contains dotenv setup before running `main.py`, where flask code is stored
+`run:app` runs `run.py`, which contains dotenv setup before running `main.py`, where flask code is stored
 
 if you want to run on http, replace `--https 0.0.0.0:8000,server.crt,server.key` with `--http 0.0.0.0:8000`

@@ -3,3 +3,4 @@
 *.key
 venv/
 __pycache__/
+*.xml
